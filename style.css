@@ -1,0 +1,124 @@
+/***********************************************************
+Note:
+Prefix it before use in your pages for better compatibility.
+***********************************************************/
+
+/*** Imports ***/
+
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+
+/*** General Styling ***/
+
+body {
+	font-family: 'Roboto Condensed', sans-serif;
+	text-align: center;
+	color: #353535;
+	background-color: #f9f9f9;
+}
+
+footer {
+	position: relative;
+	top: 8px;
+	left: -8px;
+	width: 100%;
+	background-color: #353535;
+	color: #f9f9f9;
+	padding: 20px;
+	margin-top: 20px;
+
+}
+
+p {
+	font-size: 16pt;
+}
+
+/*** Filters Styling ***/
+
+/* Blur */
+
+.example-blur img {
+	filter: blur(8px);
+}
+
+/* Brightness */
+
+.example-brightness img {
+	filter: brightness(2); /* 2 = 200% */
+}
+
+/* Contrast */
+
+.example-contrast img {
+	filter: contrast(2); /* 2 = 200% */
+}
+
+/* Grayscale */
+
+.example-grayscale img {
+	filter: grayscale(0.8);
+}
+
+/* Hue-Rotate */
+
+.example-hue-rotate img {
+	filter: hue-rotate(199deg);  /* Based on Color Wheel */
+}
+
+/* Sepia */
+
+.example-sepia img {
+	filter: sepia(0.8);
+}
+
+/* Invert */
+
+.example-invert img {
+	filter: invert(1); /* 0 for false 1 for true */
+}
+
+/* Saturate */
+
+.example-saturate img {
+	filter: saturate(5); /* 5 = 500% */
+}
+
+/* Drop-Shadow */
+
+.example-drop-shadow img {
+	filter: drop-shadow(3px 3px 3px rgba(0,0,0,0.5));
+}
+
+.example-drop-shadow img:nth-child(2) {
+	box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+	filter: none;
+}
+
+/* Opacity */
+
+.example-opacity img {
+	filter: opacity(0.5);
+}
+
+/* Combined Filters */
+
+.example-combined img {
+	filter: hue-rotate(-50deg) saturate(1.4) contrast(1.2);
+}
+
+/* Animated filters */
+
+@keyframes filter-animation {
+
+	0% {
+		filter: saturate(1) blur(0);
+	}
+
+	100% {
+		filter: saturate(2.5) blur(5px);
+	}
+
+}
+
+.example-animated img {
+	animation: filter-animation 2s alternate infinite;
+}
